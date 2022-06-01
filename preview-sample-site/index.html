@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+
+    <!-- initialising window.Shopify object -->
+    <script>
+      var Shopify = Shopify || {};
+      Shopify.shop = "jovis-dev.myshopify.com";
+      Shopify.locale = "en";
+      Shopify.currency = { active: "INR", rate: "1.0" };
+      Shopify.country = "IN";
+      Shopify.theme = {
+        name: "Dawn",
+        id: 130013692144,
+        theme_store_id: 887,
+        role: "main",
+      };
+      Shopify.theme.handle = "null";
+      Shopify.theme.style = { id: null, handle: null };
+      Shopify.cdnHost = "cdn.shopify.com";
+    </script>
+
+    <!-- initialising sample current product -->
+    <script
+      type="text/javascript"
+      async=""
+      src="js/sampleValues.js"
+    ></script>
+    <!-- This script just turns on preview mode . it is used when this page is not used in preview in falcon -->
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const isDemoMode = urlParams.get("demo-mode") === "true";
+      if (!isDemoMode) window.isPreviewPage = true;
+      window.useSampleData = true ;
+    </script>
+
+    <!-- Add Embed Scripts here -->
+    <script
+      type="text/javascript"
+      async=""
+      src="http://localhost:8000/embed.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="header flex justify-center">
+      <div class="header-inner flex items-center">
+        <h1 class="color-font">Sample Site</h1>
+      </div>
+    </div>
+    <div class="flex justify-center body-wrapper">
+      <div class="body-content-wrapper">
+        <div class="slider"></div>
+        <div class="circle-thingy-container flex items-center justify-evenly">
+          <div class="circle-thingy"></div>
+          <div class="circle-thingy"></div>
+          <div class="circle-thingy"></div>
+          <div class="circle-thingy"></div>
+        </div>
+        <div class="shop-item-container flex items-center justify-center">
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+          <div class="shop-item"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>

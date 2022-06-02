@@ -22,9 +22,10 @@
 
     <!-- initialising window.Shopify object -->
     <script>
+      var urlParams = new URLSearchParams(window.location.search);
       var Shopify = Shopify || {};
       Shopify.shop = "jovis-dev.myshopify.com";
-      Shopify.locale = "en";
+      Shopify.locale = urlParams.get("lang") ? urlParams.get("lang") : "en";
       Shopify.currency = { active: "INR", rate: "1.0" };
       Shopify.country = "IN";
       Shopify.theme = {
@@ -39,17 +40,13 @@
     </script>
 
     <!-- initialising sample current product -->
-    <script
-      type="text/javascript"
-      async=""
-      src="js/sampleValues.js"
-    ></script>
+    <script type="text/javascript" async="" src="js/sampleValues.js"></script>
     <!-- This script just turns on preview mode . it is used when this page is not used in preview in falcon -->
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       const isDemoMode = urlParams.get("demo-mode") === "true";
       if (!isDemoMode) window.isPreviewPage = true;
-      window.useSampleData = true ;
+      window.useSampleData = true;
     </script>
 
     <!-- Add Embed Scripts here -->

@@ -43,8 +43,8 @@
     <script type="text/javascript" async="" src="js/sampleValues.js"></script>
     <!-- This script just turns on preview mode . it is used when this page is not used in preview in falcon -->
     <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const isDemoMode = urlParams.get("demo-mode") === "true";
+      const urlParameters = new URLSearchParams(window.location.search);
+      const isDemoMode = urlParameters.get("demo-mode") === "true";
       if (!isDemoMode) window.isPreviewPage = true;
       window.useSampleData = true;
     </script>

@@ -493,7 +493,7 @@ let sampleCart = {
   items_subtotal_price: 4099,
   cart_level_discount_applications: [],
 };
-previewValues = {};
+let previewValues = {};
 previewValues.sampleCurrentProduct = sampleCurrentProduct;
 previewValues.sampleCartDetails = sampleCart;
 previewValues.RelatedProducts = {};

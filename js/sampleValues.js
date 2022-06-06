@@ -497,3 +497,5 @@ window.previewValues = {};
 previewValues.sampleCurrentProduct = sampleCurrentProduct;
 previewValues.sampleCartDetails = sampleCart;
 previewValues.RelatedProducts = {};
+
+console.log("window.previewValues",window.previewValues);

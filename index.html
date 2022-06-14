@@ -47,14 +47,28 @@
       const isDemoMode = urlParameters.get("demo-mode") === "true";
       if (!isDemoMode) window.isPreviewPage = true;
       window.useSampleData = true;
-    </script>
 
-    <!-- Add Embed Scripts here -->
-    <script
-      type="text/javascript"
-      async=""
-      src="http://localhost:8000/embed.js"
-    ></script>
+      // Embedding COCA script tag based on teh environment
+      const environment = urlParameters.get("env");
+      let embedURL;
+      switch (environment) {
+        case "staging": {
+          embedURL = "https://vikram-city.pages.dev/embed.js";
+          break;
+        }
+        case "production": {
+          embedURL = "https://vikram-city.pages.dev/embed.js"; // TODO: Add real roduction url here
+          break;
+        }
+        default:{
+          embedURL = `http://localhost:${environment}/embed.js`;
+          break;
+        }
+      }
+      var cocaEmbedTag = document.createElement("script");
+      cocaEmbedTag.setAttribute("src", embedURL);
+      document.head.appendChild(cocaEmbedTag);
+    </script>
   </head>
 
   <body>

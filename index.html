@@ -37,6 +37,145 @@
       Shopify.theme.handle = "null";
       Shopify.theme.style = { id: null, handle: null };
       Shopify.cdnHost = "cdn.shopify.com";
+
+      var trekkie = {
+        integrations: [
+          {
+            options: {
+              appName: "storefront",
+              development: false,
+              defaultAttributes: {
+                shopId: 28156821583,
+                isMerchantRequest: true,
+                themeId: 83331416143,
+                themeCityHash: "14477229791718307904",
+                contentLanguage: "en",
+                currency: "INR",
+              },
+              isServerSideCookieWritingEnabled: true,
+            },
+            defaultAttributes: {
+              shopId: 28156821583,
+              isMerchantRequest: true,
+              themeId: 83331416143,
+              themeCityHash: "14477229791718307904",
+              contentLanguage: "en",
+              currency: "INR",
+              appName: "storefront",
+              uniqToken: "b94b9f98-7a31-488d-99db-6154f55ac3e1",
+              visitToken: "584765fb-ae7a-4fdc-811c-cf17f7a26874",
+              microSessionId: "fbb3b4c5-480E-4286-573D-7B18C252F80F",
+              microSessionCount: 3,
+              isPersistentCookie: true,
+            },
+          },
+          {
+            options: {},
+            trekkie: {
+              options: {
+                appName: "storefront",
+                development: false,
+                defaultAttributes: {
+                  shopId: 28156821583,
+                  isMerchantRequest: true,
+                  themeId: 83331416143,
+                  themeCityHash: "14477229791718307904",
+                  contentLanguage: "en",
+                  currency: "INR",
+                },
+                isServerSideCookieWritingEnabled: true,
+              },
+              defaultAttributes: {
+                shopId: 28156821583,
+                isMerchantRequest: true,
+                themeId: 83331416143,
+                themeCityHash: "14477229791718307904",
+                contentLanguage: "en",
+                currency: "INR",
+                appName: "storefront",
+                uniqToken: "b94b9f98-7a31-488d-99db-6154f55ac3e1",
+                visitToken: "584765fb-ae7a-4fdc-811c-cf17f7a26874",
+                microSessionId: "fbb3b4c5-480E-4286-573D-7B18C252F80F",
+                microSessionCount: 3,
+                isPersistentCookie: true,
+              },
+            },
+            timestampManager: {},
+            campaignManager: {},
+          },
+          {
+            options: {
+              facebookAppPixelId: "",
+              facebookCapiEnabled: false,
+              agent: "shopify",
+              source: "trekkie-storefront-renderer",
+              emitV4CheckoutEvent: true,
+            },
+            shopId: 28156821583,
+            visitToken: "584765fb-ae7a-4fdc-811c-cf17f7a26874",
+            uniqueToken: "b94b9f98-7a31-488d-99db-6154f55ac3e1",
+            appName: "storefront",
+            pageID: "fbb3b4cd-363E-462C-5750-ED474D5EFAA8",
+          },
+        ],
+        eventNameToEventIdMapping: {},
+        allIntegrationsHaveLoaded: true,
+        config: {
+          Trekkie: {
+            appName: "storefront",
+            development: false,
+            defaultAttributes: {
+              shopId: 28156821583,
+              isMerchantRequest: true,
+              themeId: 83331416143,
+              themeCityHash: "14477229791718307904",
+              contentLanguage: "en",
+              currency: "INR",
+            },
+            isServerSideCookieWritingEnabled: true,
+          },
+          S2S: {
+            emitV4CheckoutEvent: true,
+            facebookCapiEnabled: false,
+            source: "trekkie-storefront-renderer",
+          },
+          initialDocumentCookie:
+            "_y=b94b9f98-7a31-488d-99db-6154f55ac3e1; _shopify_y=b94b9f98-7a31-488d-99db-6154f55ac3e1; __ssid=1bc77853-7b3d-45dd-8828-4bb248ba87c7; _ab=1; _abv=0; mfy-is-optin=false; mfy-user-id=80c10a3b-7fd8-47fd-9816-4d0496dfb1c4; _ga=GA1.1.434120220.1648816219; _ga_S5PSPP6KFJ=GS1.1.1656495403.56.0.1656495403.0; localization=IN; _s=584765fb-ae7a-4fdc-811c-cf17f7a26874; _shopify_s=584765fb-ae7a-4fdc-811c-cf17f7a26874",
+        },
+        navigationInfo: {
+          navigationType: "navigate",
+          navigationApi: "PerformanceNavigationTiming",
+        },
+        trekkie: {
+          options: {
+            appName: "storefront",
+            development: false,
+            defaultAttributes: {
+              shopId: 28156821583,
+              isMerchantRequest: true,
+              themeId: 83331416143,
+              themeCityHash: "14477229791718307904",
+              contentLanguage: "en",
+              currency: "INR",
+            },
+            isServerSideCookieWritingEnabled: true,
+          },
+          defaultAttributes: {
+            shopId: 28156821583,
+            isMerchantRequest: true,
+            themeId: 83331416143,
+            themeCityHash: "14477229791718307904",
+            contentLanguage: "en",
+            currency: "INR",
+            appName: "storefront",
+            uniqToken: "b94b9f98-7a31-488d-99db-6154f55ac3e1",
+            visitToken: "584765fb-ae7a-4fdc-811c-cf17f7a26874",
+            microSessionId: "fbb3b4c5-480E-4286-573D-7B18C252F80F",
+            microSessionCount: 3,
+            isPersistentCookie: true,
+          },
+        },
+      };
     </script>
 
     <!-- initialising sample current product -->
@@ -60,7 +199,7 @@
           embedURL = "https://vikram-city.pages.dev/embed.js"; // TODO: Add real roduction url here
           break;
         }
-        default:{
+        default: {
           embedURL = `http://localhost:${environment}/embed.js`;
           break;
         }

@@ -6536,4 +6536,6 @@ let emulatedSessionStorage = {
 window.previewValues = {};
 previewValues.sampleCurrentProduct = sampleCurrentProduct;
 previewValues.sampleCartDetails = sampleCart;
+previewValues.sampleRecomendedProducts = sampleRecomendedProducts;
+previewValues.emulatedSessionStorage = emulatedSessionStorage;
 previewValues.RelatedProducts = {};

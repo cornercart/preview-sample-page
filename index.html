@@ -2375,27 +2375,58 @@
       const isDemoMode = urlParameters.get("demo-mode") === "true";
       if (!isDemoMode) window.isPreviewPage = true;
       window.useSampleData = true;
-
       // Embedding COCA script tag based on teh environment
       const environment = urlParameters.get("env");
-      let embedURL;
+      let root_url;
       switch (environment) {
         case "staging": {
           embedURL = "https://staging.vikram.pages.dev/embed.js";
           break;
         }
         case "production": {
-          embedURL = "https://art.usecorner.io/embed.js"; // TODO: Add real roduction url here
+          root_url = "https://art.usecorner.io"; // TODO: Add real roduction url here
           break;
         }
         default: {
-          embedURL = `http://localhost:${environment}/embed.js`;
+          root_url = `http://localhost:${environment}`;
           break;
         }
       }
-      var cocaEmbedTag = document.createElement("script");
-      cocaEmbedTag.setAttribute("src", embedURL);
-      document.head.appendChild(cocaEmbedTag);
+      window.cornerStorefrontToken = "1231231231231231231";
+
+      !(function (e, t) {
+        if ("object" == typeof exports && "object" == typeof module)
+          module.exports = t();
+        else if ("function" == typeof define && define.amd) define([], t);
+        else {
+          var r = t();
+          for (var o in r) ("object" == typeof exports ? exports : e)[o] = r[o];
+        }
+      })(self, function () {
+        return (() => {
+          "use strict";
+          var e, t, o;
+          return (
+            (e = this.document.createElement("script")),
+            (t = this.document.createElement("script")),
+            (o = this.document.createElement("link")),
+            (e.type = "text/javascript"),
+            (e.async = !0),
+            (e.src = `${root_url}/corner_node_vendors.js`),
+            (t.type = "text/javascript"),
+            (t.async = !0),
+            (t.src = `${root_url}/cornerWidget.js`),
+            (o.rel = "stylesheet"),
+            (o.type = "text/css"),
+            (o.href = `${root_url}/cornerWidget.css`),
+            console.log(` ----> `, this.document),
+            (window.onload = function () {
+              document.body.append(e, t, o);
+            }),
+            {}
+          );
+        })();
+      });
     </script>
   </head>
 

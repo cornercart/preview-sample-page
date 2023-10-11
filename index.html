@@ -2384,7 +2384,7 @@
           break;
         }
         case "production": {
-          root_url = "https://art.usecorner.io"; // TODO: Add real roduction url here
+          root_url = "https://art.usecorner.io"; 
           break;
         }
         default: {
@@ -2419,7 +2419,6 @@
             (o.rel = "stylesheet"),
             (o.type = "text/css"),
             (o.href = `${root_url}/cornerWidget.css`),
-            console.log(` ----> `, this.document),
             (window.onload = function () {
               document.body.append(e, t, o);
             }),
